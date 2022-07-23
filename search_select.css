@@ -1,0 +1,87 @@
+.search_select {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search_select .currentValue {
+    border: 1px solid #999;
+    padding: 4px 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.search_select .slideIcon {
+    display: inline-block;
+    margin-left: auto;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    border-bottom: none;
+    transition: all .5s;
+}
+
+.search_select .slideIcon.slideed {
+    transform: rotate(180deg);
+}
+
+.search_select .optionBox {
+    z-index: 9;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    background: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+    display: none;
+    box-sizing: border-box;
+}
+
+.search_select .optionBox .searchInputBox {
+    display: flex;
+    align-items: center;
+    margin: 4px;
+}
+
+.search_select .optionBox .searchInput {
+    width: 94%;
+    border-radius: 4px;
+    border: 2px solid #777777;
+    line-height: 1.6em;
+    font-size: inherit;
+}
+
+.search_select .optionBox .searchInputBox .searchBtn {
+    flex-shrink: 0;
+    padding: 6px;
+    min-height: 100%;
+}
+
+.search_select .optionBox .list {
+    max-height: 300px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.search_select .optionBox .option {
+    width: 100%;
+    padding: 0px 12px;
+    line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.search_select .optionBox .option.active,
+.search_select .optionBox .option:hover {
+    background: #5897fb;
+    color: #ffffff;
+}

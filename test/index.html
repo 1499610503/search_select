@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="search_select test" />
+        <title>test</title>
+        <link rel="stylesheet" type="text/css" href="css/search_select.css" />
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="app">
+            <form>
+                <div class="form-group" style="width: 50%;">
+                    <select name="attr_set_id" id="text_search_select">
+                        <option value="1">option1</option>
+                        <option value="2">option2</option>
+                        <option value="3">option3</option>
+                        <option value="4">option4</option>
+                    </select>
+                </div>
+
+            </form>
+        </div>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/search_select.js"></script>
+        <script>
+            var ss1 = new SearchSelect('#text_search_select',{placeholder:'输入搜索内容'})
+            // 添加额外的项:
+            ss1.addSelectOption([{
+                value: 5,
+                text: 'option5'
+            }, {
+                value: 6,
+                text: 'option6'
+            }, {
+                value: 7,
+                text: 'option7'
+            }, {
+                value: 8,
+                text: 'option8'
+            }, ])
+        </script>
+    </body>
+</html>
